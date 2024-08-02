@@ -1,4 +1,9 @@
 // Import the data to customize and insert them into page
+//audio
+    let audio = document.getElementById("myAudio");
+          audio.play();
+          audio.loop = true;
+
 const fetchData = () => {
     fetch("customize.json")
       .then(data => data.json())
@@ -307,19 +312,7 @@ const fetchData = () => {
   
   // Run fetch and animation in sequence
   
-  // audio
+
   
-  document.addEventListener('DOMContentLoaded', function() {
-    var audio = document.getElementById('myAudio');
-    if (audio) {
-      if (audio.src.endsWith('.mp3')) {
-        audio.load();
-      } else {
-        console.error('Audio file is not an MP3 or src is missing!');
-      }
-    } else {
-      console.error('Audio element not found!');
-    }
-  });
   
   fetchData();
